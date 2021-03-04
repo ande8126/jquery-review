@@ -16,8 +16,12 @@ function getInfo(){
     //get value from nameIn
     const name = $( '#nameIn' ).val(); //gets value from the input element
     //create a user object
+    //get favorite color
+    const color = $( '#favoriteColorIn' ).val();
+    //create user object
     const user = {
-        name: name
+        name: name,
+        color: color
     }//end user object
     //push user
     emirp.push( user );
@@ -29,9 +33,15 @@ function getInfo(){
     //loop thru the cohort array
     for ( let i=0; i<emirp.length; i++ ) {
         //append each user to the ul/DOM
-        el.append( '<li>' + emirp[i].name + '</li>' );
+        el.append( '<li class="' + emirp[i].color + '">' + emirp[i].name + '</li>' );
     }//end for
-    
+    //update cohort count
+    //target element
+    let count = $( '#cohortCount' );
+    //empty
+    count.empty();
+    //append
+    count.append( emirp.length );
     //empty the nameIn element
     $( '#nameIn' ).val( '' ); //set the value for this element
 }//end getInfo

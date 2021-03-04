@@ -1,3 +1,23 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.red{
+    color: red;
+}
+.orange{
+    color: orange;
+}
+.yellow {
+    color: yellow;
+}
+
+.green{
+    color: green;
+}
+.blue{
+    color: blue;
+}
+.purple{
+    color: purple;
+}
